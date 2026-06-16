@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React with Babel Example</title>
+  
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+  <div class="js-container"></div>
+
+  <script type="text/babel">
+  
+    // Step A: Search the HTML document to locate our target container.
+    const container = document.querySelector('.js-container');
+    
+    // Step B: Initialize a modern React root mounting zone inside that container.
+    const root = ReactDOM.createRoot(container);
+    
+    // Step C: Render a real HTML element (JSX syntax) directly using React!
+    // Babel intercepts this line and secretly rewrites it to: 
+    // React.createElement('h1', null, 'Welcome to React!')
+    root.render(<h1>Welcome to React!</h1>);
+    
+  </script>
+
+</body>
+</html>

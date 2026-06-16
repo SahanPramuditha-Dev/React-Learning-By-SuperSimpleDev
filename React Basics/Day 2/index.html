@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to React</title>
+
+    <!-- 
+    1. REACT CORE LIBRARY 
+    This script loads the core React engine. It manages things like components, 
+    state, and the logic of your application.
+  -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+
+    <!-- 
+    2. REACT DOM LIBRARY 
+    This script loads the DOM renderer. It takes the React logic from the core 
+    library and physically draws it onto the web browser screen.
+  -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 
+    3. THE MOUNTING POINT (THE DOM NODE)
+    This is an empty box in your HTML. React needs a specific place on the page 
+    to inject its content. We gave it a class name so JavaScript can find it.
+  -->
+    <div class="js-container"></div>
+
+    <!-- 
+    4. THE EXECUTION SCRIPT
+    This is standard browser JavaScript. Because we are not using any HTML tags 
+    inside our JavaScript (JSX), we do not need the heavy Babel compiler tool.
+  -->
+    <script>
+        // Step A: Locate the empty HTML <div> container we created above.
+        const container = document.querySelector('.js-container');
+
+        // Step B: Turn that empty HTML container into a modern "React Root".
+        // This hands over control of that specific <div> to the React engine.
+        const root = ReactDOM.createRoot(container);
+
+        // Step C: Tell React to print our text string inside that root area.
+        root.render('Welcome to First Day of React!');
+    </script>
+
+</body>
+
+</html>
